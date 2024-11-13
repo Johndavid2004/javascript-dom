@@ -8,11 +8,84 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
   <title>Formulario de Registro</title>
   <style>
-    /* Estilos de la página */
-    body { /*...*/ }
-    .form-container { /*...*/ }
-    h3, label, input, button, #mensajeError { /*...*/ }
-    /* Efectos de hover en botón */
+    body {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        background-color: rgb(104, 102, 102);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .form-container {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHlKUrGq9sOodRS5PAweY5OGq3Zkhl3NnprQ&s");
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.808);
+      width: 500px;
+    }
+
+    h3 {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        color: #ffffff;
+    }
+
+    form div {
+      margin-bottom: 15px;
+    }
+
+    label {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      width: 95%;
+      padding: 8px;
+      border: 1px solid #000000;
+      border-radius: 6px;
+    }
+
+    #mensajeError {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    button {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      background-color: #444444;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #000000;
+      border-radius: 6px;
+    }
+
     button:hover {
       background-color: #0616ff;
       transform: scale(1.2);
@@ -20,7 +93,6 @@
   </style>
 </head>
 <body>
-
   <div class="form-container">
     <h3>Formulario de Registro</h3>
     <form id="formRegistro">
@@ -50,13 +122,11 @@
 
       let errores = [];
 
-      // Validación de campos
       if (nombre === "") errores.push("El nombre es obligatorio.");
       if (email === "") errores.push("El correo electrónico es obligatorio.");
       else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) errores.push("Formato de correo no válido.");
       if (password.length < 6) errores.push("La contraseña debe tener al menos 6 caracteres.");
 
-      // Mostrar mensajes de error o éxito
       if (errores.length > 0) {
         mensajeError.innerHTML = errores.join("<br>");
         console.error("Errores en el formulario:", errores);

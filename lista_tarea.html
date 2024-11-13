@@ -8,7 +8,95 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
   <title>Lista de Tareas</title>
   <style>
-    /* Estilos existentes */
+    body {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        background-color: rgb(104, 102, 102);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+      background-image: url("https://i.pinimg.com/736x/81/e2/28/81e2285225282c6dc6cbca2545da669a.jpg");
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.808);
+      width: 600px;
+      height: 400px;
+    }
+
+    input[type="text"]{
+      padding: 8px;
+      margin: 5px;
+      font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      width: 90%;
+      cursor: pointer;
+      border: 1px solid #000000;
+      border-radius: 6px;
+    }
+
+    button {
+      font-family: "Geist", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+      padding: 8px;
+      margin: 5px;
+      background-color: rgb(7, 168, 47);
+      color: #000000;
+      padding: 10px;
+      width: 40%;
+      cursor: pointer;
+      border: 1px solid #000000;
+      border-radius: 6px;
+    }
+
+    button:hover {
+      background-color: #ff0505;
+      color: #000000;
+      transform: scale(1.2);
+    }
+
+    #tabla {
+      text-align: left;
+      color: #ffffff;
+      font-family: "Geist", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+      width: 100%;
+      border-collapse: separate;
+    }
+
+    h3 {
+      text-align: center;
+      color: #ffffff;
+      font-family: "Geist", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #resultadoBusqueda {
+      color: #4a90e2;
+      font-weight: bold;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
