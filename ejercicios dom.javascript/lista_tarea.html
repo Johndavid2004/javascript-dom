@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <title>Lista de Tareas</title>
+  <style>
+    body {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        background-color: rgb(102, 102, 102);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+      background-image: url("https://i.pinimg.com/736x/81/e2/28/81e2285225282c6dc6cbca2545da669a.jpg");
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgb(255, 255, 255);
+      width: 500px;
+      height: 300px;
+    }
+
+    h3 {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      color: #ffffff;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #030303;
+      border-radius: 4px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #f9f9f9;
+      margin: 8px 0;
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4px;
+    }
+
+    button {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      background-color: #616161;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #05f772;
+      transform: scale(1.2);
+    }
+
+    .completado {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h3>Lista de Tareas</h3>
+    <input type="text" id="nuevaTarea" placeholder="Agregar una tarea">
+    <button onclick="agregarTarea()">Agregar</button>
+    <ul id="tareas"></ul>
+  </div>
+
+  <script>
+    function agregarTarea() {
+      const tareaTexto = document.getElementById('nuevaTarea').value;
+      if (tareaTexto === "") return;
+
+      const listaTareas = document.getElementById('tareas');
+      const tareaItem = document.createElement('li');
+      tareaItem.textContent = tareaTexto;
+
+      const btnCompletar = document.createElement('button');
+      btnCompletar.textContent = "Completada";
+      btnCompletar.onclick = () => {
+        tareaItem.classList.toggle("completado");
+      };
+
+      const btnEliminar = document.createElement('button');
+      btnEliminar.textContent = "Eliminar";
+      btnEliminar.onclick = () => listaTareas.removeChild(tareaItem);
+
+      tareaItem.appendChild(btnCompletar);
+      tareaItem.appendChild(btnEliminar);
+      listaTareas.appendChild(tareaItem);
+      document.getElementById('nuevaTarea').value = "";
+    }
+  </script>
+
+</body>
+</html>

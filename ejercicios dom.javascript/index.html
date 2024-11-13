@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <title>Interfaz de Ejercicios</title>
+  <style>
+    body {
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        background-image: url("https://c4.wallpaperflare.com/wallpaper/811/645/172/metro-2033-tunnel-subway-train-abandon-deserted-hd-wallpaper-preview.jpg");
+        background-repeat: round;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .botones-container {
+      margin: 20px 0;
+    }
+
+    .botones-container button {
+        font-family: "Geist", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+      color: #fff;
+      padding: 8px;
+      margin: 10px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      background-color: #737374;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      transition: background-color #000 0.3s ease;
+    }
+
+    .botones-container button:hover {
+        transform: scale(1.2);
+      background-color: #066330;
+    }
+  </style>
+</head>
+<body>
+  <div class="botones-container">
+    <button onclick="window.location.href='registro.html'">Ejercicio 1: Formulario de Registro</button>
+    <button onclick="window.location.href='lista_tareas.html'">Ejercicio 2: Lista de Tareas</button>
+    <button onclick="window.location.href='busqueda_tabla.html'">Ejercicio 3: Búsqueda en Tabla</button>
+  </div>
+</body>
+</html>
